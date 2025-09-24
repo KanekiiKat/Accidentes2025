@@ -4,55 +4,79 @@ import org.alejandrovillar.functions.values.*;
 public class Accidente {
 
     private int numExpediente;
-    private String fecha;
-    private String hora;
-    private Localidad LOCALIZACION;
-    private TipoAccidente TIPOACCIDENTE;
-    private EstadoMeteorologico METEOROLOGICO;
-    private TipoVehiculo TIPOVEHICULO;
-    private TipoPersona TIPOPERSONA;
-    private String rangoEdad;
-    private Genero GENERO;
-    private int cod_lesividad;
-    private int coordenada_x_utm;
-    private int coordenada_y_utm;
-    private char alcohol;
-    private int positivo_droga;
+    private String fecha;                 // p.ej. "15/03/2025"
+    private String hora;                  // p.ej. "08:30:00"
+    private String localidad;             // vía/intersección en texto plano
 
+    private TipoAccidente tipoAccidente;          // enum
+    private EstadoMeteorologico estadoMeteorologico; // enum
+    private TipoVehiculo tipoVehiculo;            // enum
+    private TipoPersona tipoPersona;              // enum
+    private String rangoEdad;                     // p.ej. "18-24"
+    private Genero genero;                        // enum
+
+    private Integer codLesividad;                 // puede venir vacío → null
+    private int coordenadaXUtm;
+    private int coordenadaYUtm;
+
+    private char alcohol;                         // 'S' o 'N'
+    private int positivoDroga;                    // 1 o 0
+
+    // Constructor por defecto con valores seguros
     public Accidente() {
-        this.numExpediente = numExpediente;
-        this.fecha = fecha;
-        this.hora = hora;
-        this.LOCALIZACION = LOCALIZACION;
-        this.TIPOACCIDENTE = TIPOACCIDENTE;
-        this.METEOROLOGICO = METEOROLOGICO;
-        this.TIPOVEHICULO = TIPOVEHICULO;
-        this.TIPOPERSONA = TIPOPERSONA;
-        this.rangoEdad = rangoEdad;
-        this.GENERO = GENERO;
-        this.cod_lesividad = cod_lesividad;
-        this.coordenada_x_utm = coordenada_x_utm;
-        this.coordenada_y_utm = coordenada_y_utm;
-        this.alcohol = alcohol;
-        this.positivo_droga = positivo_droga;
+        this.numExpediente = 0;
+        this.fecha = "";
+        this.hora = "";
+        this.localidad = "";
+
+        this.tipoAccidente = TipoAccidente.OTRO;
+        this.estadoMeteorologico = EstadoMeteorologico.DESCONOCIDO;
+        this.tipoVehiculo = TipoVehiculo.OTRO;
+        this.tipoPersona = TipoPersona.OTRO;
+        this.rangoEdad = "";
+        this.genero = Genero.DESCONOCIDO;
+
+        this.codLesividad = null;
+        this.coordenadaXUtm = 0;
+        this.coordenadaYUtm = 0;
+
+        this.alcohol = 'N';
+        this.positivoDroga = 0;
     }
 
+    // Getters (si los necesitas ahora)
     public int getNumExpediente() { return numExpediente; }
     public String getFecha() { return fecha; }
     public String getHora() { return hora; }
-    public Localidad getLOCALIZACION() { return LOCALIZACION; }
-    public TipoAccidente getTIPOACCIDENTE() { return TIPOACCIDENTE; }
-    public EstadoMeteorologico getMETEOROLOGICO() { return METEOROLOGICO; }
-    public TipoVehiculo getTIPOVEHICULO() { return TIPOVEHICULO; }
-    public TipoPersona getTIPOPERSONA() { return TIPOPERSONA; }
+    public String getLocalidad() { return localidad; }
+    public TipoAccidente getTipoAccidente() { return tipoAccidente; }
+    public EstadoMeteorologico getEstadoMeteorologico() { return estadoMeteorologico; }
+    public TipoVehiculo getTipoVehiculo() { return tipoVehiculo; }
+    public TipoPersona getTipoPersona() { return tipoPersona; }
     public String getRangoEdad() { return rangoEdad; }
-    public Genero getGENERO() { return GENERO; }
-    public int getCod_lesividad() { return cod_lesividad; }
-    public int getCoordenada_x_utm() { return coordenada_x_utm; }
-    public int getCoordenada_y_utm() { return coordenada_y_utm; }
+    public Genero getGenero() { return genero; }
+    public Integer getCodLesividad() { return codLesividad; }
+    public int getCoordenadaXUtm() { return coordenadaXUtm; }
+    public int getCoordenadaYUtm() { return coordenadaYUtm; }
     public char getAlcohol() { return alcohol; }
-    public int getPositivo_droga() { return positivo_droga; }
+    public int getPositivoDroga() { return positivoDroga; }
 
+    // Setters (para que tu Builder/CSV los vaya rellenando)
+    public void setNumExpediente(int v) { this.numExpediente = v; }
+    public void setFecha(String v) { this.fecha = v; }
+    public void setHora(String v) { this.hora = v; }
+    public void setLocalidad(String v) { this.localidad = v; }
+    public void setTipoAccidente(TipoAccidente v) { this.tipoAccidente = v; }
+    public void setEstadoMeteorologico(EstadoMeteorologico v) { this.estadoMeteorologico = v; }
+    public void setTipoVehiculo(TipoVehiculo v) { this.tipoVehiculo = v; }
+    public void setTipoPersona(TipoPersona v) { this.tipoPersona = v; }
+    public void setRangoEdad(String v) { this.rangoEdad = v; }
+    public void setGenero(Genero v) { this.genero = v; }
+    public void setCodLesividad(Integer v) { this.codLesividad = v; }
+    public void setCoordenadaXUtm(int v) { this.coordenadaXUtm = v; }
+    public void setCoordenadaYUtm(int v) { this.coordenadaYUtm = v; }
+    public void setAlcohol(char v) { this.alcohol = Character.toUpperCase(v); }
+    public void setPositivoDroga(int v) { this.positivoDroga = v; }
 }
 
 
