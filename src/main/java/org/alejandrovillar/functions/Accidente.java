@@ -27,7 +27,7 @@ public class Accidente {
     private String lesividad;
     private String coordenadaXUtm;
     private String coordenadaYUtm;
-    private Character alcohol;
+    private String alcohol;
     private Optional<Integer> positivoDroga;
 
     public Accidente(
@@ -48,7 +48,7 @@ public class Accidente {
             String lesividad,
             String coordenadaXUtm,
             String coordenadaYUtm,
-            Character alcohol,
+            String alcohol,
             Optional<Integer> positivoDroga
     ) {
         this.numExpediente = numExpediente;
@@ -91,12 +91,32 @@ public class Accidente {
     public String getLesividad() { return lesividad; }
     public String getCoordenadaXUtm() { return coordenadaXUtm; }
     public String getCoordenadaYUtm() { return coordenadaYUtm; }
-    public Character getAlcohol() { return alcohol; }
+    public String getAlcohol() { return alcohol; }
     public Optional<Integer> getPositivoDroga() { return positivoDroga; }
 
 
-
-
+    @Override
+    public String toString() {
+        return getNumExpediente() + " | " +
+                getFecha() + " | " +
+                getHora() + " | " +
+                getLocalizacion() + " | " +
+                getNumero() + " | " +
+                getCodDistrito() + " | " +
+                getDistrito() + " | " +
+                getTipoAccidente() + " | " +
+                getEstadoMeteorologico() + " | " +
+                getTipoVehiculo() + " | " +
+                getTipoPersona() + " | " +
+                getRangoEdad() + " | " +
+                getGenero() + " | " +
+                getCodLesividad() + " | " +
+                getLesividad() + " | " +
+                getCoordenadaXUtm() + " | " +
+                getCoordenadaYUtm() + " | " +
+                getAlcohol() + " | " +
+                getPositivoDroga().map(String::valueOf).orElse("");
+    }
 
     }
 

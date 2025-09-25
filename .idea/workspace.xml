@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b44933d-ee6a-4136-83e1-473935a98652" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alejandrovillar/functions/AccidenteBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/alejandrovillar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alejandrovillar/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/alejandrovillar/functions/Accidente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alejandrovillar/functions/Accidente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/alejandrovillar/functions/AccidenteBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alejandrovillar/functions/AccidenteBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1758729119660</updated>
       <workItem from="1758729121137" duration="5360000" />
-      <workItem from="1758816681360" duration="7728000" />
+      <workItem from="1758816681360" duration="10847000" />
     </task>
     <servers />
   </component>
