@@ -1,13 +1,21 @@
 package org.alejandrovillar.functions;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.*;
+
 public class Accidente {
 
-    private int numExpediente;
+    List<Accidente> accidentes = new ArrayList<>();
+
+    private String numExpediente;
     private String fecha;
     private String hora;
     private String localizacion;
-    private Integer numero;
-    private Integer codDistrito;
+    private String numero;
+    private String codDistrito;
     private String distrito;
     private String tipoAccidente;
     private String estadoMeteorologico;
@@ -15,20 +23,20 @@ public class Accidente {
     private String tipoPersona;
     private String rangoEdad;
     private String genero;
-    private Integer codLesividad;
+    private String codLesividad;
     private String lesividad;
-    private int coordenadaXUtm;
-    private int coordenadaYUtm;
+    private String coordenadaXUtm;
+    private String coordenadaYUtm;
     private Character alcohol;
-    private int positivoDroga;
+    private Optional<Integer> positivoDroga;
 
     public Accidente(
-            int numExpediente,
+            String numExpediente,
             String fecha,
             String hora,
             String localizacion,
-            Integer numero,
-            Integer codDistrito,
+            String numero,
+            String codDistrito,
             String distrito,
             String tipoAccidente,
             String estadoMeteorologico,
@@ -36,12 +44,12 @@ public class Accidente {
             String tipoPersona,
             String rangoEdad,
             String genero,
-            Integer codLesividad,
+            String codLesividad,
             String lesividad,
-            int coordenadaXUtm,
-            int coordenadaYUtm,
+            String coordenadaXUtm,
+            String coordenadaYUtm,
             Character alcohol,
-            int positivoDroga
+            Optional<Integer> positivoDroga
     ) {
         this.numExpediente = numExpediente;
         this.fecha = fecha;
@@ -64,12 +72,14 @@ public class Accidente {
         this.positivoDroga = positivoDroga;
     }
 
-    public int getNumExpediente() { return numExpediente; }
+
+
+    public String getNumExpediente() { return numExpediente; }
     public String getFecha() { return fecha; }
     public String getHora() { return hora; }
     public String getLocalizacion() { return localizacion; }
-    public Integer getNumero() { return numero; }
-    public Integer getCodDistrito() { return codDistrito; }
+    public String getNumero() { return numero; }
+    public String getCodDistrito() { return codDistrito; }
     public String getDistrito() { return distrito; }
     public String getTipoAccidente() { return tipoAccidente; }
     public String getEstadoMeteorologico() { return estadoMeteorologico; }
@@ -77,15 +87,25 @@ public class Accidente {
     public String getTipoPersona() { return tipoPersona; }
     public String getRangoEdad() { return rangoEdad; }
     public String getGenero() { return genero; }
-    public Integer getCodLesividad() { return codLesividad; }
+    public String getCodLesividad() { return codLesividad; }
     public String getLesividad() { return lesividad; }
-    public int getCoordenadaXUtm() { return coordenadaXUtm; }
-    public int getCoordenadaYUtm() { return coordenadaYUtm; }
+    public String getCoordenadaXUtm() { return coordenadaXUtm; }
+    public String getCoordenadaYUtm() { return coordenadaYUtm; }
     public Character getAlcohol() { return alcohol; }
-    public int getPositivoDroga() { return positivoDroga; }
+    public Optional<Integer> getPositivoDroga() { return positivoDroga; }
 
 
-}
+
+
+
+    }
+
+
+
+
+
+
+
 
 
 
