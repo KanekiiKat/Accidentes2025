@@ -94,7 +94,6 @@ public class Accidente {
     public String getAlcohol() { return alcohol; }
     public Optional<Integer> getPositivoDroga() { return positivoDroga; }
 
-
     @Override
     public String toString() {
         return getNumExpediente() + " | " +
